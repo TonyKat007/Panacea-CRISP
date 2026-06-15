@@ -1,0 +1,7 @@
+gradio
+transformers
+torch
+accelerate
+spaces
+bitsandbytes
+peft
