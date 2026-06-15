@@ -1,6 +1,5 @@
 ---
-title: BacteReaso
-emoji: 🦠
+title: Panacea-CRISP
 colorFrom: indigo
 colorTo: green
 sdk: gradio
