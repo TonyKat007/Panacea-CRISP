@@ -1,4 +1,3 @@
-```python
 content = """# Panacea-CRISP 🧬
 **Clinical Resistance Inference & Susceptibility Predictor**
 
@@ -23,8 +22,6 @@ The model was trained efficiently using 4-bit quantization and LoRA to enable fa
 ## 💻 Usage & Inference
 Here is how you can load the fine-tuned LoRA adapters and run inference on a new bacterial isolate to extract a clinical prediction:
 
-
-```
 
 ```text
 File generated.
@@ -97,7 +94,7 @@ f.write(content)
 
 print("File generated.")
 
-```
+```text
 Your markdown file is ready!
 [file-tag: code-generated-file-0-1781534679371791006]
 
