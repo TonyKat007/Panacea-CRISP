@@ -1,7 +1,7 @@
 # Panacea-CRISP 🧬
 **Clinical Resistance Inference & Susceptibility Predictor**
 
-Panacea-CRISP (formerly known as BacteReason) is a specialized, fine-tuned Large Language Model designed to predict antibiotic resistance in bacterial isolates. By distilling step-by-step molecular reasoning traces from a larger teacher model, Panacea-CRISP learns to evaluate whether a specific bacterial strain is **susceptible** or **resistant** to a given antibiotic based on complex clinical reasoning.
+Panacea-CRISP is a specialized, fine-tuned Large Language Model designed to predict antibiotic resistance in bacterial isolates. By distilling step-by-step molecular reasoning traces from a larger teacher model, Panacea-CRISP learns to evaluate whether a specific bacterial strain is **susceptible** or **resistant** to a given antibiotic based on complex clinical reasoning.
 
 ---
 
