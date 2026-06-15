@@ -5,7 +5,7 @@ Panacea-CRISP is a specialized, fine-tuned Large Language Model designed to pred
 
 ---
 
-## 🚀 Overview
+## Overview
 * **Base Model:** `Qwen/Qwen2.5-3B-Instruct` (or `Qwen/QwQ-32B` for high-VRAM environments)
 * **Fine-Tuning Framework:** [Unsloth](https://github.com/unslothai/unsloth) (Low-Rank Adaptation)
 * **Teacher Model Traces:** Claude Opus 4.5 + TogoMCP
@@ -14,7 +14,7 @@ Panacea-CRISP is a specialized, fine-tuned Large Language Model designed to pred
 
 ---
 
-## 🛠️ Training Configuration
+## Training Configuration
 The model was trained efficiently using 4-bit quantization and LoRA to enable fast distillation on consumer-grade GPUs (such as the NVIDIA T4) or professional A100 setups.
 * **LoRA Rank:** 16
 * **LoRA Alpha:** 16
@@ -25,7 +25,7 @@ The model was trained efficiently using 4-bit quantization and LoRA to enable fa
 
 ---
 
-## 💻 Usage & Inference
+## Usage & Inference
 Here is how you can load the fine-tuned LoRA adapters and run inference on a new bacterial isolate to extract a clinical prediction:
 
 ```python
@@ -69,3 +69,24 @@ generated_trace = tokenizer.decode(new_tokens, skip_special_tokens=True)
 
 print("\\n=== Final Reasoning & Verdict ===")
 print(generated_trace)
+
+```
+
+## Evaluation & Clinical Risk Management
+The model's outputs are evaluated by parsing the final sentences of its generated reasoning trace for deterministic keywords (`resistant` or `susceptible`). 
+
+When validating against benchmark isolates, Panacea-CRISP outputs a **Confusion Matrix** to closely monitor critical clinical risks. We prioritize evaluating:
+
+* **False Negatives (Critical Clinical Risk):** Predicting a resistant strain as susceptible.
+* **False Positives:** Predicting a susceptible strain as resistant.
+* **Overall Accuracy:** Validated against verified isolate phenotypes.
+
+---
+
+## Contributing
+Contributions are welcome. Feel free to open issues or submit pull requests for prompt template adjustments, dataset expansion, or evaluation scripting.
+
+---
+
+## License
+Apache 2.0 (Inherited from Qwen/Unsloth base configurations).
